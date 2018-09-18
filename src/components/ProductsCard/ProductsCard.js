@@ -8,19 +8,24 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
 
 const styles = {
   card: {
     maxWidth: 345,
     marginTop: '50px',
-    margin: 'auto',
+    marginBottom: '50px',
+    margin: 'auto'
   },
   media: {
     // ⚠️ object-fit is not supported by IE11.
     objectFit: 'cover',
     width: '100%',
-    height: '100%',
+    height: '100%'
   },
+  link: {
+    textDecoration: 'none'
+  }
 };
 
 function ProductsCard(props) {
@@ -46,9 +51,11 @@ function ProductsCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Details
-        </Button>
+        <Link className={classes.link} to={{ pathname:`/product/${props.productName}` }}>
+          <Button size="small" color="primary">
+            Details
+          </Button>
+        </Link>
         <Button size="small" color="primary">
           Add to Cart
         </Button>
