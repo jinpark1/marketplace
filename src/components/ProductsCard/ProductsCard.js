@@ -51,7 +51,7 @@ function ProductsCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Link className={classes.link} to={{ pathname:`/product/${props.productName}` }}>
+        <Link className={classes.link} to={{ pathname:`/product/${props.productName}`, state: { products: props } }}>
           <Button size="small" color="primary">
             Details
           </Button>
