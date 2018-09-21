@@ -8,6 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ShoppingCart from '@material-ui/icons/ShoppingCart';
 import Badge from '@material-ui/core/Badge';
+import Drawer from '../Drawer/Drawer';
 
 const styles = {
   root: {
@@ -32,7 +33,7 @@ function ButtonAppBar(props) {
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-            <MenuIcon />
+            <Drawer />
           </IconButton>
           <Typography variant="title" color="inherit" className={classes.grow}>
             Marketplace
