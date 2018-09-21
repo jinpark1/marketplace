@@ -32,24 +32,21 @@ function ProductsCard(props) {
   const { classes } = props;
   return (
     <Card className={classes.card}>
-    {console.log('--------testing', props)}
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          className={classes.media}
-          height="140"
-          image={props.image}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="headline" component="h2">
-            {props.productName}
-          </Typography>
-          <Typography component="p">
-            {props.description}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+      <CardMedia
+        component="img"
+        className={classes.media}
+        height="140"
+        image={props.image}
+        title="Contemplative Reptile"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="headline" component="h2">
+          {props.productName}
+        </Typography>
+        <Typography component="p">
+          {props.description}
+        </Typography>
+      </CardContent>
       <CardActions>
         <Link className={classes.link} to={{ pathname:`/product/${props.productName}`, state: { products: props } }}>
           <Button size="small" color="primary">
