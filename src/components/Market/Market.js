@@ -19,11 +19,6 @@ class Market extends Component {
         })
     }
 
-    // deleteProduct() {
-    //     fetch('/api/products/id')
-    // }
-    
-
     render() {
         return (
             <div className="Market">
